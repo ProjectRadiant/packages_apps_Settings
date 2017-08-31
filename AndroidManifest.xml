@@ -3371,7 +3371,6 @@
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
                 android:value="com.android.settings.gestures.GlobalActionsPanelSettings" />
         </activity>
-
         <activity android:name="Settings$PowerMenuSettingsActivity"
                   android:label="@string/power_menu_setting_name">
             <intent-filter>
@@ -3419,6 +3418,33 @@
             </intent-filter>
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
                        android:value="com.android.settings.sound.MediaControlsSettings" />
+        <!-- Extra Settings -->
+        <activity android:name=".Settings$ExtraSettingsActivity"
+            android:label="@string/extra_settings_title"
+            android:icon="@drawable/ic_settings_extra"
+            android:taskAffinity="">
+            <intent-filter android:priority="1">
+                <action android:name="com.extra.settings.ExtraSettings" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.VOICE_LAUNCH" />
+                <category android:name="com.android.settings.SHORTCUT" />
+            </intent-filter>
+            <intent-filter android:priority="-3">
+                <action android:name="com.android.settings.action.SETTINGS" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.category"
+                android:value="com.android.settings.category.ia.homepage" />
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                android:value="com.extra.settings.ExtraSettings" />
+            <meta-data android:name="com.android.settings.PRIMARY_PROFILE_CONTROLLED"
+                android:value="true" />
+            <meta-data android:name="com.android.settings.summary"
+                android:resource="@string/extra_settings_summary"/>
+
         </activity>
 
         <!-- This is the longest AndroidManifest.xml ever. -->

@@ -160,6 +160,8 @@ import com.android.settings.wifi.savedaccesspoints.SavedAccessPointsWifiSettings
 import com.android.settings.wifi.savedaccesspoints2.SavedAccessPointsWifiSettings2;
 import com.android.settings.wifi.tether.WifiTetherSettings;
 
+import com.extra.settings.ExtraSettings;
+
 public class SettingsGateway {
 
     /**
@@ -301,13 +303,16 @@ public class SettingsGateway {
             MobileNetworkListFragment.class.getName(),
             PowerMenuSettings.class.getName(),
             GlobalActionsPanelSettings.class.getName(),
+// cher
             DeviceControlsSettings.class.getName(),
-            DarkModeSettingsFragment.class.getName(),
             BugReportHandlerPicker.class.getName(),
             GestureNavigationSettingsFragment.class.getName(),
             InteractAcrossProfilesSettings.class.getName(),
             InteractAcrossProfilesDetails.class.getName(),
-            MediaControlsSettings.class.getName()
+            MediaControlsSettings.class.getName(),
+//cher end
+            DarkModeSettingsFragment.class.getName(),
+            ExtraSettings.class.getName()
     };
 
     public static final String[] SETTINGS_FOR_RESTRICTED = {
@@ -347,5 +352,6 @@ public class SettingsGateway {
             Settings.MyDeviceInfoActivity.class.getName(),
             Settings.ModuleLicensesActivity.class.getName(),
             UserBackupSettingsActivity.class.getName(),
+            Settings.ExtraSettingsActivity.class.getName(),
     };
-}
+            }

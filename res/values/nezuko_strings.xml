@@ -123,5 +123,7 @@
     <string name="nezuko_updater_title">System Updater</string>
     <string name="nezuko_updater_summary">NezukoOS OTA</string>
 
+    <!-- Volume link notification -->
+    <string name="volume_link_notification_title">Link ring &amp; notification volumes</string>
 
 </resources>

@@ -47,4 +47,8 @@
         <!-- Battery saver -->
     <string name="battery_saver_is_enabled">Battery saver is enabled</string>
 
+        <!-- Battery temp -->
+    <string name="battery_temp_title">Battery temperature</string>
+    <string name="battery_temp_summary">Tap to switch scale</string>
+
 </resources>

@@ -48,8 +48,10 @@ import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.fuelgauge.EstimateKt;
 import com.android.settingslib.search.SearchIndexable;
 import com.android.settingslib.utils.PowerUtil;
+import com.android.internal.util.nezuko.NezukoUtils;
 import com.android.settingslib.utils.StringUtil;
 import com.android.settingslib.widget.LayoutPreference;
+import androidx.preference.Preference;
 
 import java.util.List;
 
@@ -192,6 +194,8 @@ public class PowerUsageSummary extends PowerUsageBase implements OnLongClickList
                 KEY_TIME_SINCE_LAST_FULL_CHARGE);
         mBatteryTemp = (PowerGaugePreference) findPreference(KEY_BATTERY_TEMP);
         mBatteryUtils = BatteryUtils.getInstance(getContext());
+        
+        updateBatteryTempPreference();
 
         if (Utils.isBatteryPresent(getContext())) {
             restartBatteryInfoLoader();
@@ -201,15 +205,7 @@ public class PowerUsageSummary extends PowerUsageBase implements OnLongClickList
     @Override
     public boolean onPreferenceTreeClick(Preference preference) {
         if (KEY_BATTERY_TEMP.equals(preference.getKey())) {
-            if (batteryTemp) {
-                mBatteryTemp.setSubtitle(
-                    com.android.internal.util.derp.derpUtils.batteryTemperature(getContext(), false));
-                batteryTemp = false;
-            } else {
-                mBatteryTemp.setSubtitle(
-                    com.android.internal.util.derp.derpUtils.batteryTemperature(getContext(), true));
-                batteryTemp = true;
-            }
+            updateBatteryTempPreference();
         }
         return super.onPreferenceTreeClick(preference);
     }
@@ -284,10 +280,9 @@ public class PowerUsageSummary extends PowerUsageBase implements OnLongClickList
         // reload BatteryInfo and updateUI
         restartBatteryInfoLoader();
         updateLastFullChargePreference();
+        updateBatteryTempPreference();
         mScreenUsagePref.setSubtitle(StringUtil.formatElapsedTime(getContext(),
                 mBatteryUtils.calculateScreenUsageTime(mStatsHelper), false));
-        mBatteryTemp.setSubtitle(
-                com.android.internal.util.derp.derpUtils.batteryTemperature(getContext(), batteryTemp));
     }
 
 
@@ -312,6 +307,19 @@ public class PowerUsageSummary extends PowerUsageBase implements OnLongClickList
             mLastFullChargePref.setSubtitle(
                     StringUtil.formatRelativeTime(getContext(), lastFullChargeTime,
                             false /* withSeconds */));
+        }
+    }
+
+    @VisibleForTesting
+    void updateBatteryTempPreference() {
+        if (batteryTemp) {
+            mBatteryTemp.setSubtitle(
+                com.android.internal.util.nezuko.NezukoUtils.batteryTemperature(getContext(), false));
+            batteryTemp = false;
+        } else {
+            mBatteryTemp.setSubtitle(
+                com.android.internal.util.nezuko.NezukoUtils.batteryTemperature(getContext(), true));
+            batteryTemp = true;
         }
     }
 

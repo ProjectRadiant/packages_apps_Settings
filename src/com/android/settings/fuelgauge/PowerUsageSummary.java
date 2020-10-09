@@ -120,6 +120,8 @@ public class PowerUsageSummary extends PowerUsageBase implements OnLongClickList
     boolean mNeedUpdateBatteryTip;
     @VisibleForTesting
     BatteryTipPreferenceController mBatteryTipPreferenceController;
+    @VisibleForTesting
+    ValueAnimator animator;
 
     private boolean batteryTemp = false;
 
@@ -284,6 +286,7 @@ public class PowerUsageSummary extends PowerUsageBase implements OnLongClickList
     @Override
     public void onPause() {
         getContentResolver().unregisterContentObserver(mSettingsObserver);
+        detachBatteryHeaderAnimationIfNecessary();
         super.onPause();
     }
 
@@ -443,7 +446,7 @@ public class PowerUsageSummary extends PowerUsageBase implements OnLongClickList
         mBatteryLevel = currentLevel;
         final int diff = Math.abs(prevLevel - currentLevel);
         if (diff != 0) {
-            final ValueAnimator animator = ValueAnimator.ofInt(prevLevel, currentLevel);
+            animator = ValueAnimator.ofInt(prevLevel, currentLevel);
             animator.setDuration(BATTERY_ANIMATION_DURATION_MS_PER_LEVEL * diff);
             animator.setInterpolator(AnimationUtils.loadInterpolator(getContext(),
                     android.R.interpolator.fast_out_slow_in));
@@ -457,6 +460,13 @@ public class PowerUsageSummary extends PowerUsageBase implements OnLongClickList
                 }
             });
             animator.start();
+        }
+    }
+
+    @VisibleForTesting
+    void detachBatteryHeaderAnimationIfNecessary() {
+        if (animator.isRunning()) {
+            animator.pause();
         }
     }
 

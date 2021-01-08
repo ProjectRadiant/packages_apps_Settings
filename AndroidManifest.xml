@@ -3418,6 +3418,8 @@
             </intent-filter>
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
                        android:value="com.android.settings.sound.MediaControlsSettings" />
+    </activity>
+    
         <!-- Extra Settings -->
         <activity android:name=".Settings$ExtraSettingsActivity"
             android:label="@string/extra_settings_title"

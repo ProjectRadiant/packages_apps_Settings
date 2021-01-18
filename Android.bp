@@ -31,7 +31,7 @@ android_library {
            "Extra/src/**/*.java",
     ],
 
-    aaptflags: ["--extra-packages com.raven.lair"],
+    aaptflags: ["--extra-packages com.nezuko.extra"],
 
     resource_dirs: ["res",
                     "Extra/res"

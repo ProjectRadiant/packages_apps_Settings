@@ -21,6 +21,14 @@
     android:key="top_level_settings">
 
     <Preference
+        android:key="top_level_nezukoextra_settings"
+        android:title="@string/nezukoextra_title"
+        android:summary="@string/nezukoextra_summary"
+        android:icon="@drawable/ic_settings_ravenlair"
+        android:order="-130"
+        android:fragment="com.nezuko.extra.NezukoExtra"/>
+
+    <Preference
         android:key="top_level_network"
         android:title="@string/network_dashboard_title"
         android:summary="@string/summary_placeholder"

@@ -159,8 +159,8 @@ import com.android.settings.wifi.p2p.WifiP2pSettings;
 import com.android.settings.wifi.savedaccesspoints.SavedAccessPointsWifiSettings;
 import com.android.settings.wifi.savedaccesspoints2.SavedAccessPointsWifiSettings2;
 import com.android.settings.wifi.tether.WifiTetherSettings;
-
 import com.nezuko.extra.NezukoExtra;
+import com.extra.settings.ExtraSettings;
 
 public class SettingsGateway {
 
@@ -312,7 +312,8 @@ public class SettingsGateway {
             MediaControlsSettings.class.getName(),
 //cher end
             DarkModeSettingsFragment.class.getName(),
-            NezukoExtra.class.getName()
+            NezukoExtra.class.getName(),
+            ExtraSettings.class.getName()
     };
 
     public static final String[] SETTINGS_FOR_RESTRICTED = {
@@ -353,5 +354,6 @@ public class SettingsGateway {
             Settings.ModuleLicensesActivity.class.getName(),
             UserBackupSettingsActivity.class.getName(),
             Settings.NezukoExtraActivity.class.getName(),
+            Settings.ExtraSettingsActivity.class.getName(),
     };
             }

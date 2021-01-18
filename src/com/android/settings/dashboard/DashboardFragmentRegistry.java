@@ -45,8 +45,8 @@ import com.android.settings.security.LockscreenDashboardFragment;
 import com.android.settings.security.SecuritySettings;
 import com.android.settings.system.SystemDashboardFragment;
 import com.android.settingslib.drawer.CategoryKey;
-
 import com.nezuko.extra.NezukoExtra;
+import com.extra.settings.ExtraSettings;
 
 import java.util.Map;
 
@@ -122,6 +122,8 @@ public class DashboardFragmentRegistry {
         PARENT_TO_CATEGORY_KEY_MAP.put(SmartBatterySettings.class.getName(),
                 CategoryKey.CATEGORY_SMART_BATTERY_SETTINGS);
         PARENT_TO_CATEGORY_KEY_MAP.put(NezukoExtra.class.getName(),
+                CategoryKey.CATEGORY_SYSTEM_DEVELOPMENT);
+        PARENT_TO_CATEGORY_KEY_MAP.put(ExtraSettings.class.getName(),
                 CategoryKey.CATEGORY_SYSTEM_DEVELOPMENT);
 
         CATEGORY_KEY_TO_PARENT_MAP = new ArrayMap<>(PARENT_TO_CATEGORY_KEY_MAP.size());

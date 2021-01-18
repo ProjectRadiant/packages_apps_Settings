@@ -29,12 +29,14 @@ android_library {
 
         srcs: ["src/**/*.java",
            "Extra/src/**/*.java",
+           "Themer/src/**/*.java",
     ],
 
     aaptflags: ["--extra-packages com.nezuko.extra"],
 
     resource_dirs: ["res",
-                    "Extra/res"
+                    "Extra/res",
+                    "Themer/res"
     ],
 
     static_libs: [

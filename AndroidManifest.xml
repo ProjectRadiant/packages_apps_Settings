@@ -3419,12 +3419,10 @@
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
                        android:value="com.android.settings.sound.MediaControlsSettings" />
     </activity>
-    
-        <!-- Extra Settings -->
-        <activity android:name=".Settings$ExtraSettingsActivity"
-            android:label="@string/nezukoextra_title"
-            android:icon="@drawable/ic_settings_ravenlair"
-            android:parentActivityName="com.android.settings">
+        <activity android:name=".Settings$RavenLairActivity"
+                  android:label="@string/nezukoextra_title"
+                  android:icon="@drawable/ic_settings_ravenlair"
+                  android:parentActivityName="com.android.settings">
             <intent-filter android:priority="69">
                   <action android:name="android.intent.action.MAIN" />    
                   <category android:name="com.android.settings.SHORTCUT" />
@@ -3432,7 +3430,17 @@
                   <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
                    android:value="com.nezuko.extra.NezukoExtra"/>
         </activity>
+        <activity android:name=".Settings$ExtraSettingsActivity"
+                  android:label="@string/extra_settings_title"
+                  android:icon="@drawable/ic_settings_ravenlair"
+                  android:parentActivityName="com.android.settings">
+            <intent-filter android:priority="69">
+                  <action android:name="android.intent.action.MAIN" />    
+                  <category android:name="com.android.settings.SHORTCUT" />
+            </intent-filter>
+                  <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                   android:value="com.extra.settings.ExtraSettings"/>
+        </activity>
 
-        <!-- This is the longest AndroidManifest.xml ever. -->
     </application>
 </manifest>

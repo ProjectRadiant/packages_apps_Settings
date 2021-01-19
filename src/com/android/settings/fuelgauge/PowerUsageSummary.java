@@ -53,6 +53,7 @@ import com.android.settingslib.utils.PowerUtil;
 import com.android.internal.util.nezuko.NezukoUtils;
 import com.android.settingslib.utils.StringUtil;
 import com.android.settingslib.widget.LayoutPreference;
+import androidx.preference.Preference;
 
 import java.util.List;
 

@@ -109,7 +109,7 @@
     <permission android:name="com.google.android.settings.routines.ROUTINES_ACTIONS" android:protectionLevel="normal|signature|system"/>
 
     <application android:label="@string/settings_label"
-            android:icon="@drawable/ic_launcher_settings"
+            android:icon="@mipmap/ic_launcher"
             android:theme="@style/Theme.Settings"
             android:hardwareAccelerated="true"
             android:requiredForAllUsers="true"

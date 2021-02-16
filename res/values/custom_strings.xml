@@ -29,6 +29,9 @@
     <!-- Battery light -->
     <string name="battery_light_title">Turn on the light when charging</string>
 
+    <!-- Low Battery light -->
+    <string name="low_battery_light_title">Flash led light when battery low</string>
+
     <!-- Refresh rate -->
     <string name="refresh_rate_title">Screen refresh rate</string>
 
@@ -42,5 +45,8 @@
     <!-- Battery temp -->
     <string name="battery_temp_title">Battery temperature</string>
     <string name="battery_temp_summary">Tap to switch scale</string>
+
+    <!-- Manage applications, package string displayed in app snippet -->
+    <string name="packagename_text"><xliff:g id="package_name">%1$s</xliff:g></string>
 
 </resources>

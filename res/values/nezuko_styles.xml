@@ -25,6 +25,11 @@
         <item name="android:fontFamily">@*android:string/config_headlineFontFamilyMedium</item>
     </style>
 
+    <style name="ToolbarText.Collapsed" parent="@android:style/TextAppearance.DeviceDefault.Widget.ActionBar.Title"/>
+
+    <style name="ToolbarText.Expanded" parent="ToolbarText.Collapsed">
+        <item name="android:textSize">34sp</item>
+    </style>
 
     <style name="TextAppearance.NezukoInfoSummary">
         <item name="android:textColor">?android:attr/textColorPrimary</item>

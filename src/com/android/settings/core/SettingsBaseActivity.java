@@ -38,6 +38,7 @@ import android.widget.Toolbar;
 import com.nezuko.support.monet.SettingsColors;
 import android.graphics.drawable.PaintDrawable;
 import android.view.WindowManager;
+import com.google.android.material.appbar.CollapsingToolbarLayout;
 
 import androidx.fragment.app.FragmentActivity;
 
@@ -46,6 +47,7 @@ import com.android.settings.SubSettings;
 import com.android.settings.dashboard.CategoryManager;
 import com.android.settingslib.drawer.Tile;
 
+import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.setupcompat.util.WizardManagerHelper;
 
 import java.util.ArrayList;
@@ -90,14 +92,17 @@ public class SettingsBaseActivity extends FragmentActivity {
         super.setContentView(R.layout.settings_base_layout);
 
         final Toolbar toolbar = findViewById(R.id.action_bar);
+        final CollapsingToolbarLayout ctl = findViewById(R.id.collapsing_toolbar);
         if (theme.getBoolean(android.R.styleable.Theme_windowNoTitle, false)) {
             toolbar.setVisibility(View.GONE);
+            ((AppBarLayout) findViewById(R.id.baseAppBar)).setExpanded(false);
             return;
         }
 
-        bgrounded =  new PaintDrawable(sc.mainBG(this));
+        toolbar.setBackground(new PaintDrawable(sc.mainBG(this)));
+        ctl.setBackground(new PaintDrawable(sc.mainBG(this)));
+        ctl.setContentScrimColor(sc.mainBG(this));
 
-        toolbar.setBackground(bgrounded);
         setActionBar(toolbar);
 
         if (DEBUG_TIMING) {

@@ -37,6 +37,23 @@
         settings:controller="com.android.settings.deviceinfo.DeviceNamePreferenceController"
         settings:enableCopying="true"/>
 
+
+    <!-- ROM Version -->
+    <Preference
+        android:key="modversion"
+        android:title="@string/nezuko_version_title"
+        android:summary="@string/device_info_default"
+        settings:enableCopying="true"
+        settings:controller="com.android.settings.deviceinfo.NezukoVersionPreferenceController"/>
+
+    <!-- Maintainer Name -->
+    <Preference
+        android:key="maintainer"
+        android:title="@string/nezuko_maintainer_title"
+        android:summary="@string/device_info_default"
+        settings:enableCopying="true"
+        settings:controller="com.android.settings.deviceinfo.NezukoMaintainerPreferenceController"/>
+
     <!-- Account name -->
     <Preference
         android:key="branded_account"

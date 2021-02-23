@@ -57,4 +57,10 @@
     <string name="nezuko_version_title">Nezuko version</string>
     <string name="nezuko_maintainer_title">Device maintainer</string>
 
+    <!-- NezukoOS versioning -->
+    <string name="nezuko_processor_title">Processor</string>
+    <string name="nezuko_storage_code_title">Storage</string>
+    <string name="nezuko_battery_type_title">Battery</string>
+    <string name="nezuko_screen_title">Screen</string>
+
 </resources>

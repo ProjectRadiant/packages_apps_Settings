@@ -22,25 +22,24 @@
     android:title="@string/about_settings">
 
     <com.android.settingslib.widget.LayoutPreference
-        android:key="my_device_info_header"
-        android:order="0"
-        android:layout="@layout/settings_entity_header"
-        android:selectable="false"
-        settings:isPreferenceVisible="false"/>
+        android:key="nezuko_info"
+        android:order="1"
+        android:layout="@layout/about_phone_info"
+        android:selectable="false" />
 
     <!-- Device name -->
     <com.android.settings.widget.ValidatedEditTextPreference
         android:key="device_name"
-        android:order="1"
+        android:order="2"
         android:title="@string/my_device_info_device_name_preference_title"
         android:summary="@string/summary_placeholder"
         settings:controller="com.android.settings.deviceinfo.DeviceNamePreferenceController"
         settings:enableCopying="true"/>
 
-
     <!-- ROM Version -->
     <Preference
         android:key="modversion"
+        android:order="3"
         android:title="@string/nezuko_version_title"
         android:summary="@string/device_info_default"
         settings:enableCopying="true"
@@ -49,6 +48,7 @@
     <!-- Maintainer Name -->
     <Preference
         android:key="maintainer"
+        android:order="4"
         android:title="@string/nezuko_maintainer_title"
         android:summary="@string/device_info_default"
         settings:enableCopying="true"
@@ -57,7 +57,7 @@
     <!-- Account name -->
     <Preference
         android:key="branded_account"
-        android:order="2"
+        android:order="5"
         android:title="@string/my_device_info_account_preference_title"
         android:summary="@string/summary_placeholder"
         settings:controller="com.android.settings.deviceinfo.BrandedAccountPreferenceController"/>
@@ -65,7 +65,7 @@
     <!-- Phone number -->
     <Preference
         android:key="phone_number"
-        android:order="3"
+        android:order="6"
         android:title="@string/status_number"
         android:summary="@string/summary_placeholder"
         android:selectable="false"

@@ -82,22 +82,22 @@
     <color name="fallback_tintColor">#89000000</color>
 
     <!-- Dashboard/homepage icon background colors -->
-    <color name="homepage_network_background">#e3eeff</color>
-    <color name="homepage_connected_device_background">#e2e5f4</color>
-    <color name="homepage_app_and_notification_background">#ffdce3</color>
-    <color name="homepage_battery_background">#d9f0f2</color>
-    <color name="homepage_display_background">#fff2d9</color>
-    <color name="homepage_sound_background">#d9f5f2</color>
-    <color name="homepage_storage_background">#f0dff3</color>
-    <color name="homepage_security_background">#dbf0e6</color>
-    <color name="homepage_accounts_background">#ffe3ec</color>
-    <color name="homepage_accessibility_background">#e8e2f4</color>
-    <color name="homepage_system_background">#ffa667</color>
+    <color name="homepage_network_background">#86aae3</color>
+    <color name="homepage_connected_device_background">#a8b2e3</color>
+    <color name="homepage_app_and_notification_background">#f7b2c0</color>
+    <color name="homepage_battery_background">#a4d7db</color>
+    <color name="homepage_display_background">#f5d79d</color>
+    <color name="homepage_sound_background">#afe3dd</color>
+    <color name="homepage_storage_background">#d8b4de</color>
+    <color name="homepage_security_background">#a0dec0</color>
+    <color name="homepage_accounts_background">#edc0cf</color>
+    <color name="homepage_accessibility_background">#c9bce3</color>
+    <color name="homepage_system_background">#c9bce3</color>
     <color name="homepage_support_background">#26459C</color>
-    <color name="homepage_generic_icon_background">#cadefc</color>
-    <color name="homepage_location_background">#baffff</color>
-    <color name="homepage_about_background">#aab6fe</color>
-    <color name="homepage_privacy_background">#75a7ff</color>
+    <color name="homepage_generic_icon_background">#a8bfe0</color>
+    <color name="homepage_location_background">#91cfcf</color>
+    <color name="homepage_about_background">#8892d1</color>
+    <color name="homepage_privacy_background">#6084c4</color>
 
     <color name="contextual_card_stroke_color">#1f000000</color>
     <color name="contextual_card_dismissal_background">@*android:color/material_grey_100</color>

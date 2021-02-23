@@ -257,14 +257,6 @@ public class PowerUsageSummary extends PowerUsageBase implements OnLongClickList
         updateBatteryTipFlag(icicle);
         updateBatteryTempPreference();
     }
-
-    @Override
-    public boolean onPreferenceTreeClick(Preference preference) {
-        if (KEY_BATTERY_TEMP.equals(preference.getKey())) {
-            updateBatteryTempPreference();
-        }
-        return super.onPreferenceTreeClick(preference);
-    }
 	
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
@@ -300,6 +292,8 @@ public class PowerUsageSummary extends PowerUsageBase implements OnLongClickList
                         .setTitleRes(R.string.advanced_battery_title)
                         .launch();
             return true;
+        } else if (KEY_BATTERY_TEMP.equals(preference.getKey())) {
+            updateBatteryTempPreference();
         }
         return super.onPreferenceTreeClick(preference);
     }

@@ -171,6 +171,5 @@
 
     <color name="settingsHeaderColor">@*android:color/accent_device_default_light</color>
 
-    <color name="ic_launcher_background">#516B91</color>
 
 </resources>

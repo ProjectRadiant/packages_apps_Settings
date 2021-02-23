@@ -15,4 +15,10 @@
     <!-- Title for connected TWS device group [CHAR LIMIT=none]-->
     <string name="connected_tws_device_saved_title">Saved Earbuds</string>
 
+    <!-- NezukoOS versioning -->
+    <string name="nezuko_processor_title">Processor</string>
+    <string name="nezuko_storage_code_title">Storage</string>
+    <string name="nezuko_battery_type_title">Battery</string>
+    <string name="nezuko_screen_title">Screen</string>
+
 </resources>

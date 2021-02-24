@@ -32,7 +32,7 @@ import com.android.settingslib.core.AbstractPreferenceController;
 import com.android.settingslib.core.instrumentation.MetricsFeatureProvider;
 import com.android.settingslib.core.lifecycle.Lifecycle;
 
-import com.android.settings.custom.preference.CustomSeekBarPreference;
+import com.nezuko.extra.preferences.CustomSeekBarPreference;
 
 import java.util.ArrayList;
 import java.util.List;

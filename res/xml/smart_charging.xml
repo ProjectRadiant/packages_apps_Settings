@@ -21,12 +21,12 @@
     android:key="smart_charging_screen"
     android:title="@string/smart_charging_title">
 
-    <com.android.settings.custom.preference.SystemSettingSwitchPreference
+    <com.nezuko.extra.preferences.SystemSettingSwitchPreference
         android:key="smart_charging"
         android:title="@string/smart_charging_switch_title"
         android:defaultValue="false" />
 
-    <com.android.settings.custom.preference.CustomSeekBarPreference
+    <com.nezuko.extra.preferences.CustomSeekBarPreference
         android:key="smart_charging_level"
         android:title="@string/smart_charging_level_title"
         android:max="100"
@@ -35,7 +35,7 @@
         android:defaultValue="80"
         android:dependency="smart_charging" />
 
-    <com.android.settings.custom.preference.CustomSeekBarPreference
+    <com.nezuko.extra.preferences.CustomSeekBarPreference
         android:key="smart_charging_resume_level"
         android:title="@string/smart_charging_resume_level_title"
         android:max="99"

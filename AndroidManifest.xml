@@ -3436,7 +3436,7 @@
         </activity>
         <activity android:name=".Settings$ExtraSettingsActivity"
                   android:label="@string/extra_settings_title"
-                  android:icon="@drawable/ic_settings_ravenlair"
+                  android:icon="@drawable/ic_themer_background"
                   android:parentActivityName="com.android.settings">
             <intent-filter android:priority="69">
                   <action android:name="android.intent.action.MAIN" />    

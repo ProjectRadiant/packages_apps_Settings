@@ -161,6 +161,7 @@ import com.android.settings.wifi.savedaccesspoints2.SavedAccessPointsWifiSetting
 import com.android.settings.wifi.tether.WifiTetherSettings;
 import com.nezuko.extra.NezukoExtra;
 import com.extra.settings.ExtraSettings;
+import org.descendant.health.DescendantHealth;
 
 public class SettingsGateway {
 
@@ -313,7 +314,8 @@ public class SettingsGateway {
 //cher end
             DarkModeSettingsFragment.class.getName(),
             NezukoExtra.class.getName(),
-            ExtraSettings.class.getName()
+            ExtraSettings.class.getName(),
+            DescendantHealth.class.getName()
     };
 
     public static final String[] SETTINGS_FOR_RESTRICTED = {
@@ -355,5 +357,6 @@ public class SettingsGateway {
             UserBackupSettingsActivity.class.getName(),
             Settings.NezukoExtraActivity.class.getName(),
             Settings.ExtraSettingsActivity.class.getName(),
+            Settings.DescendantHealthActivity.class.getName(),
     };
             }

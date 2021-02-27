@@ -3446,5 +3446,18 @@
                    android:value="com.extra.settings.ExtraSettings"/>
         </activity>
 
+        <!-- Neuzko Health -->
+        <activity android:name=".Settings$DescendantHealthActivity"
+            android:label="Nezuko Health"
+            android:icon="@drawable/ic_data_saver"
+            android:parentActivityName="com.android.settings">
+            <intent-filter android:priority="31">
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="com.android.settings.SHORTCUT" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                android:value="org.descendant.health.DescendantHealth" />
+        </activity>
+
     </application>
 </manifest>

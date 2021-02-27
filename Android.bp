@@ -30,13 +30,15 @@ android_library {
         srcs: ["src/**/*.java",
            "Extra/src/**/*.java",
            "Themer/src/**/*.java",
+           "DescendantHealth/src/**/*.java",
     ],
 
-    aaptflags: ["--extra-packages com.nezuko.extra"],
+    aaptflags: ["--extra-packages com.nezuko.extra","--extra-packages org.descendant.health"],
 
     resource_dirs: ["res",
                     "Extra/res",
-                    "Themer/res"
+                    "Themer/res",
+                    "DescendantHealth/res"
     ],
 
     static_libs: [

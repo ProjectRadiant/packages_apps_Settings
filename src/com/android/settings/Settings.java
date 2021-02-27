@@ -236,6 +236,7 @@ public class Settings extends SettingsActivity {
     public static class SystemDashboardActivity extends SettingsActivity {}
     public static class NezukoExtraActivity extends SettingsActivity {}
     public static class ExtraSettingsActivity extends SettingsActivity {}
+    public static class DescendantHealthActivity extends SettingsActivity {}
 
     /**
      * Activity for MediaControlsSettings

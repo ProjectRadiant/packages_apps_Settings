@@ -25,8 +25,16 @@
         android:title="@string/nezukoextra_title"
         android:summary="@string/nezukoextra_summary"
         android:icon="@drawable/ic_settings_ravenlair"
-        android:order="-130"
+        android:order="-150"
         android:fragment="com.nezuko.extra.NezukoExtra"/>
+
+    <Preference
+        android:key="top_level_descendant_health"
+        android:title="Nezuko Health"
+        android:summary="COVID-19 data, sleep helper, eyes protector"
+        android:icon="@drawable/ic_homepage_nezuko_health"
+        android:order="-140"
+        android:fragment="org.descendant.health.DescendantHealth"/>
 
     <Preference
         android:key="top_level_themer"
@@ -53,14 +61,6 @@
         android:order="-110"
         android:fragment="com.android.settings.connecteddevice.ConnectedDeviceDashboardFragment"
         settings:controller="com.android.settings.connecteddevice.TopLevelConnectedDevicesPreferenceController"/>
-
-    <Preference
-        android:key="top_level_descendant_health"
-        android:title="Nezuko Health"
-        android:summary="COVID-19 data, sleep helper, eyes protector"
-        android:icon="@drawable/ic_homepage_descendant_health"
-        android:order="-105"
-        android:fragment="org.descendant.health.DescendantHealth"/>
 
     <Preference
         android:key="top_level_apps_and_notifs"

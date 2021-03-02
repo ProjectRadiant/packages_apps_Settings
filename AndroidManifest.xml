@@ -104,7 +104,8 @@
     <uses-permission android:name="android.permission.INSTALL_DYNAMIC_SYSTEM" />
     <uses-permission android:name="android.permission.BIND_CELL_BROADCAST_SERVICE" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-    
+    <uses-permission android:name="android.permission.READ_DREAM_STATE" />
+    <uses-permission android:name="android.permission.READ_DREAM_SUPPRESSION" />  
     <uses-permission android:name="com.google.android.settings.routines.ROUTINES_ACTIONS"/>
     <permission android:name="com.google.android.settings.routines.ROUTINES_ACTIONS" android:protectionLevel="normal|signature|system"/>
 
@@ -3445,7 +3446,6 @@
                   <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
                    android:value="com.extra.settings.ExtraSettings"/>
         </activity>
-
         <!-- Neuzko Health -->
         <activity android:name=".Settings$DescendantHealthActivity"
             android:label="Nezuko Health"
@@ -3458,6 +3458,17 @@
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
                 android:value="org.descendant.health.DescendantHealth" />
         </activity>
+
+        <receiver
+            android:name=".media.BluetoothPairingReceiver"
+            android:exported="true"
+            android:permission="android.permission.BLUETOOTH_ADMIN">
+            <intent-filter>
+                <action android:name="com.android.settings.action.LAUNCH_BLUETOOTH_PAIRING"/>
+            </intent-filter>/>
+        </receiver>
+
+        <!-- This is the longest AndroidManifest.xml ever. -->
 
     </application>
 </manifest>

@@ -22,6 +22,7 @@ import android.os.UserHandle;
 
 import com.android.internal.util.nezuko.cutout.CutoutFullscreenController;
 
+
 import com.android.settings.core.BasePreferenceController;
 
 public class DisplayCutoutForceFullscreenPreferenceController extends BasePreferenceController {

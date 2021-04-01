@@ -19,10 +19,47 @@
         <item name="android:fontFamily">sans-serif-medium</item>
     </style>
 
+    <style name="settings_text_header">
+        <item name="android:textSize">45sp</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:fontFamily">@*android:string/config_headlineFontFamilyMedium</item>
+    </style>
+
+
     <style name="TextAppearance.NezukoInfoSummary">
         <item name="android:textColor">?android:attr/textColorPrimary</item>
         <item name="android:textSize">12.5sp</item>
         <item name="android:lineSpacingMultiplier">1.3</item>
         <item name="android:fontFamily">sans-serif-book</item>
     </style>
+
+    <style name="nez_cardview_text_primary">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:fontFamily">@*android:string/config_headlineFontFamilyMedium</item>
+    </style>
+
+    <style name="nez_cardview_text_secondary">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+        <item name="android:fontFamily">@*android:string/config_headlineFontFamily</item>
+    </style>
+
+    <style name="CardView.Dark">
+        <item name="cardBackgroundColor">@android:color/transparent</item>
+    </style>
+    <style name="CardView.Light">
+        <item name="cardBackgroundColor">@android:color/transparent</item>
+    </style>
+
+    <style name="CardView">
+        <item name="cardBackgroundColor">@android:color/transparent</item>
+    </style>
+
+   <style name="homepage_spacer_title_style">
+        <item name="android:textSize">40sp</item>
+        <item name="android:textColor">@color/settingsHeaderColor</item>
+        <item name="android:fontFamily">@*android:string/config_headlineFontFamily</item>
+    </style>
+
 </resources>  

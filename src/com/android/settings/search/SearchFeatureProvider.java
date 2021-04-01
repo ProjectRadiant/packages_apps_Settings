@@ -28,6 +28,7 @@ import android.content.pm.PackageManager;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toolbar;
+import android.widget.ImageView;
 
 import com.android.settings.R;
 import com.android.settings.Utils;
@@ -64,30 +65,22 @@ public interface SearchFeatureProvider {
     /**
      * Initializes the search toolbar.
      */
-    default void initSearchToolbar(Activity activity, Toolbar toolbar, int pageId) {
-        if (activity == null || toolbar == null) {
+    default void initSearchToolbar(Activity activity, ImageView imageview, int pageId) {
+        if (activity == null || imageview == null) {
             return;
         }
 
         if (!WizardManagerHelper.isDeviceProvisioned(activity)
                 || !Utils.isPackageEnabled(activity, getSettingsIntelligencePkgName(activity))
                 || WizardManagerHelper.isAnySetupWizard(activity.getIntent())) {
-            final ViewGroup parent = (ViewGroup) toolbar.getParent();
+            final ViewGroup parent = (ViewGroup) imageview.getParent();
             if (parent != null) {
                 parent.setVisibility(View.GONE);
             }
             return;
         }
-        // Please forgive me for what I am about to do.
-        //
-        // Need to make the navigation icon non-clickable so that the entire card is clickable
-        // and goes to the search UI. Also set the background to null so there's no ripple.
-        final View navView = toolbar.getNavigationView();
-        navView.setClickable(false);
-        navView.setImportantForAccessibility(IMPORTANT_FOR_ACCESSIBILITY_NO);
-        navView.setBackground(null);
 
-        toolbar.setOnClickListener(tb -> {
+        imageview.setOnClickListener(tb -> {
             final Context context = activity.getApplicationContext();
             final Intent intent = buildSearchIntent(context, pageId);
 

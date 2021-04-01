@@ -20,5 +20,5 @@
     <string name="nezuko_storage_code_title">Storage</string>
     <string name="nezuko_battery_type_title">Battery</string>
     <string name="nezuko_screen_title">Screen</string>
-
+    <string name="conmoment">Connections</string>
 </resources>

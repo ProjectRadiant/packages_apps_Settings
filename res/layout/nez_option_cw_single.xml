@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="@drawable/nez_cardview_bg_single_ripple" android:layout_width="fill_parent" android:layout_height="@dimen/op_layout_height_settings" android:paddingStart="@dimen/op_layout_start_padding" android:paddingEnd="@dimen/op_layout_end_padding" android:layout_marginStart="@dimen/op_layout_start_margin" android:layout_marginEnd="@dimen/op_layout_end_margin"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@android:id/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginStart="50.0dip" app:layout_constraintStart_toEndOf="@android:id/icon">
+        <TextView android:textSize="16.0sp" android:textColor="?android:textColorPrimary" android:id="@android:id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true" />
+        <TextView android:textColor="?android:textColorSecondary" android:id="@android:id/summary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:maxLines="1" android:singleLine="true" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

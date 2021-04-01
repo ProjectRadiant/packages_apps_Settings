@@ -3421,6 +3421,17 @@
             </intent-filter>/>
         </receiver>
 
+        <activity android:name=".Settings$NezukoExtrasActivity"
+                  android:label="@string/nezuko_extras_title"
+                  android:parentActivityName="com.android.settings">
+            <intent-filter android:priority="69">
+                  <action android:name="android.intent.action.MAIN" />    
+                  <category android:name="com.android.settings.SHORTCUT" />
+            </intent-filter>
+                  <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                   android:value="com.nezuko.extras.NezukoExtras"/>
+        </activity>
+
         <!-- This is the longest AndroidManifest.xml ever. -->
     </application>
 </manifest>

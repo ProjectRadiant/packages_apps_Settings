@@ -20,7 +20,8 @@
     <color name="homepage_accessibility_background">#783BE5</color>
     <color name="homepage_support_background">#3F5FBD</color>
     <color name="homepage_card_dismissal_background">@*android:color/material_grey_900</color>
-    <color name="contextual_card_background">@*android:color/material_grey_900</color>
+    <color name="contextual_card_background">@android:color/transparent</color>
+    <color name="nez_top_cardview">#161616</color>
     <color name="search_bar_background">@*android:color/material_grey_800</color>
     <!-- Dialog background color. -->
     <color name="dialog_background">@*android:color/material_grey_800</color>
@@ -30,6 +31,7 @@
     <color name="notification_history_background">#202124</color>
     <color name="face_intro_outline">?android:attr/colorAccent</color>
     <!-- Palette list preference colors. -->
+        <color name="transparent">#00000000</color>
     <color name="palette_list_gradient_background">@android:color/black</color>
     <color name="palette_list_color_red">@color/palette_list_dark_mode_color_red</color>
     <color name="palette_list_color_orange">@color/palette_list_dark_mode_color_orange</color>

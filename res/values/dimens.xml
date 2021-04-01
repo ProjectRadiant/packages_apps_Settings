@@ -141,7 +141,7 @@
 
     <!-- Dimensions for Wifi Assistant Card -->
     <dimen name="wifi_assistant_padding_top_bottom">16dp</dimen>
-    <dimen name="wifi_assistant_padding_start_end">16dp</dimen>
+    <dimen name="wifi_assistant_padding_start_end">16dp</dimen> 
     <dimen name="wifi_assistant_padding">25dp</dimen>
     <dimen name="wifi_assistant_text_padding">16dp</dimen>
     <dimen name="wifi_assistant_height">182dp</dimen>
@@ -149,6 +149,15 @@
     <dimen name="wifi_assistant_image_start">24dp</dimen>
     <!-- appbar height is equal search bar height (48dp) plus search bar top and bottom margin  -->
     <dimen name="app_bar_height">80dp</dimen>
+    <dimen name="app2_bar_height">250dp</dimen>
+
+    <dimen name="preference_divider">8dp</dimen>
+
+    <dimen name="nez_cardview_radius">20.0dip</dimen>
+    <dimen name="nez_top_icn">24.0dip</dimen>
+    <dimen name="nez_top_cardview_margin_list">16.dip</dimen>
+    <dimen name="nez_top_cardview_padding">0.0dip</dimen>
+
 
     <!-- CryptKeeper top margin for password/pin screen -->
     <dimen name="crypt_keeper_password_top_margin">88dip</dimen>
@@ -430,4 +439,13 @@
 
     <!-- Text padding for EmptyTextSettings -->
     <dimen name="empty_text_padding">24dp</dimen>
+
+    <dimen name="homepage_spacer_off_margin">@dimen/actionbar_size</dimen>
+    <dimen name="homepage_spacer_height">170dp</dimen>
+    <dimen name="homepage_spacer_margin">255dp</dimen>
+    <dimen name="homepage_spacer_height_base">200dp</dimen>
+    <dimen name="homepage_spacer_margin_base">255dp</dimen>
+    <dimen name="homepage_logo_size">50dp</dimen>
+    <dimen name="homepage_spacer_imageview_marginBottom">10dp</dimen>
+    <dimen name="homepage_spacer_title_marginTop">50dp</dimen>
 </resources>

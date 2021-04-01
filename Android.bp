@@ -27,7 +27,13 @@ android_library {
         "SettingsLib-search-defaults",
     ],
 
-    srcs: ["src/**/*.java"],
+    srcs: ["src/**/*.java",
+    "Themer/src/**/*.java",
+    ],
+
+    resource_dirs: ["res",
+                    "Themer/res"
+    ],
 
     static_libs: [
         "androidx-constraintlayout_constraintlayout",

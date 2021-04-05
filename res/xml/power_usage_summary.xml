@@ -28,11 +28,6 @@
         android:layout="@layout/battery_header"
         settings:controller="com.android.settings.fuelgauge.BatteryHeaderPreferenceController" />
 
-    <com.android.settings.widget.CardPreference
-        android:key="battery_tip"
-        android:title="@string/summary_placeholder"
-        settings:controller="com.android.settings.fuelgauge.batterytip.BatteryTipPreferenceController" />
-
     <Preference
         android:fragment="com.android.settings.fuelgauge.batterysaver.BatterySaverSettings"
         android:key="battery_saver_summary"

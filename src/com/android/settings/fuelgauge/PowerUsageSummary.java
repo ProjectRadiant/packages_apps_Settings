@@ -42,9 +42,7 @@ import com.android.settings.R;
 import com.android.settings.SettingsActivity;
 import com.android.settings.Utils;
 import com.android.settings.core.SubSettingLauncher;
-import com.android.settings.fuelgauge.batterytip.BatteryTipLoader;
-import com.android.settings.fuelgauge.batterytip.BatteryTipPreferenceController;
-import com.android.settings.fuelgauge.batterytip.tips.BatteryTip;
+
 import com.android.settings.overlay.FeatureFactory;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.fuelgauge.EstimateKt;
@@ -60,8 +58,7 @@ import java.util.List;
  * since the last time it was unplugged.
  */
 @SearchIndexable(forTarget = SearchIndexable.ALL & ~SearchIndexable.ARC)
-public class PowerUsageSummary extends PowerUsageBase implements OnLongClickListener,
-        BatteryTipPreferenceController.BatteryTipListener {
+public class PowerUsageSummary extends PowerUsageBase implements OnLongClickListener{
 
     static final String TAG = "PowerUsageSummary";
 
@@ -71,12 +68,9 @@ public class PowerUsageSummary extends PowerUsageBase implements OnLongClickList
     private static final String KEY_TIME_SINCE_LAST_FULL_CHARGE = "last_full_charge";
 
     @VisibleForTesting
-    static final int BATTERY_INFO_LOADER = 1;
-    @VisibleForTesting
-    static final int BATTERY_TIP_LOADER = 2;
-    @VisibleForTesting
     static final int MENU_ADVANCED_BATTERY = Menu.FIRST + 1;
     public static final int DEBUG_INFO_LOADER = 3;
+    static final int BATTERY_INFO_LOADER = 1;
 
     @VisibleForTesting
     PowerGaugePreference mScreenUsagePref;
@@ -93,10 +87,6 @@ public class PowerUsageSummary extends PowerUsageBase implements OnLongClickList
 
     @VisibleForTesting
     BatteryHeaderPreferenceController mBatteryHeaderPreferenceController;
-    @VisibleForTesting
-    boolean mNeedUpdateBatteryTip;
-    @VisibleForTesting
-    BatteryTipPreferenceController mBatteryTipPreferenceController;
 
     @VisibleForTesting
     final ContentObserver mSettingsObserver = new ContentObserver(new Handler()) {
@@ -171,25 +161,6 @@ public class PowerUsageSummary extends PowerUsageBase implements OnLongClickList
         batteryView.setCharging(!oldInfo.discharging);
     }
 
-    private LoaderManager.LoaderCallbacks<List<BatteryTip>> mBatteryTipsCallbacks =
-            new LoaderManager.LoaderCallbacks<List<BatteryTip>>() {
-
-                @Override
-                public Loader<List<BatteryTip>> onCreateLoader(int id, Bundle args) {
-                    return new BatteryTipLoader(getContext(), mStatsHelper);
-                }
-
-                @Override
-                public void onLoadFinished(Loader<List<BatteryTip>> loader,
-                        List<BatteryTip> data) {
-                    mBatteryTipPreferenceController.updateBatteryTips(data);
-                }
-
-                @Override
-                public void onLoaderReset(Loader<List<BatteryTip>> loader) {
-
-                }
-            };
 
     @Override
     public void onAttach(Context context) {
@@ -201,10 +172,6 @@ public class PowerUsageSummary extends PowerUsageBase implements OnLongClickList
         mBatteryHeaderPreferenceController.setFragment(this);
         mBatteryHeaderPreferenceController.setLifecycle(getSettingsLifecycle());
 
-        mBatteryTipPreferenceController = use(BatteryTipPreferenceController.class);
-        mBatteryTipPreferenceController.setActivity(activity);
-        mBatteryTipPreferenceController.setFragment(this);
-        mBatteryTipPreferenceController.setBatteryTipListener(this::onBatteryTipHandled);
     }
 
     @Override
@@ -223,8 +190,6 @@ public class PowerUsageSummary extends PowerUsageBase implements OnLongClickList
         if (Utils.isBatteryPresent(getContext())) {
             restartBatteryInfoLoader();
         }
-        mBatteryTipPreferenceController.restoreInstanceState(icicle);
-        updateBatteryTipFlag(icicle);
     }
 
     @Override
@@ -294,13 +259,6 @@ public class PowerUsageSummary extends PowerUsageBase implements OnLongClickList
             return;
         }
 
-        // Skip BatteryTipLoader if device is rotated or only battery level change
-        if (mNeedUpdateBatteryTip
-                && refreshType != BatteryUpdateType.BATTERY_LEVEL) {
-            restartBatteryTipLoader();
-        } else {
-            mNeedUpdateBatteryTip = true;
-        }
         // reload BatteryInfo and updateUI
         restartBatteryInfoLoader();
         updateLastFullChargePreference();
@@ -308,10 +266,7 @@ public class PowerUsageSummary extends PowerUsageBase implements OnLongClickList
                 mBatteryUtils.calculateScreenUsageTime(mStatsHelper), false));
     }
 
-    @VisibleForTesting
-    void restartBatteryTipLoader() {
-        getLoaderManager().restartLoader(BATTERY_TIP_LOADER, Bundle.EMPTY, mBatteryTipsCallbacks);
-    }
+
 
     @VisibleForTesting
     void setBatteryLayoutPreference(LayoutPreference layoutPreference) {
@@ -372,10 +327,7 @@ public class PowerUsageSummary extends PowerUsageBase implements OnLongClickList
         }
     }
 
-    @VisibleForTesting
-    void updateBatteryTipFlag(Bundle icicle) {
-        mNeedUpdateBatteryTip = icicle == null || mBatteryTipPreferenceController.needUpdate();
-    }
+
 
     @Override
     public boolean onLongClick(View view) {
@@ -396,13 +348,8 @@ public class PowerUsageSummary extends PowerUsageBase implements OnLongClickList
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        mBatteryTipPreferenceController.saveInstanceState(outState);
     }
 
-    @Override
-    public void onBatteryTipHandled(BatteryTip batteryTip) {
-        restartBatteryTipLoader();
-    }
 
     public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
             new BaseSearchIndexProvider(R.xml.power_usage_summary);

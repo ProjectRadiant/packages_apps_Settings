@@ -99,6 +99,16 @@
         android:order="-90"
         settings:controller="com.android.settings.fuelgauge.TopLevelBatteryPreferenceController"/>
 
+
+    <Preference
+        android:key="top_level_themer"
+        android:layout="@layout/nez_top_card_middle"
+        android:title="Nezuko Extras"
+        android:summary="@string/nezuko_extras_title"
+        android:icon="@drawable/ic_settings_nezthe"
+        android:order="-85"
+        android:fragment="com.nezuko.extras.NezukoExtras"/>
+
     <Preference
         android:key="top_level_display"
         android:layout="@layout/nez_top_card_middle"
@@ -186,15 +196,6 @@
         android:order="-20"
         android:fragment="com.android.settings.accessibility.AccessibilitySettings"
         settings:controller="com.android.settings.accessibility.TopLevelAccessibilityPreferenceController"/>
-
-    <Preference
-        android:key="top_level_themer"
-        android:layout="@layout/nez_top_card_middle"
-        android:title="Nezuko Extras"
-        android:summary="@string/nezuko_extras_title"
-        android:icon="@drawable/ic_settings_nezthe"
-        android:order="-19"
-        android:fragment="com.nezuko.extras.NezukoExtras"/>
 
     <Preference
         android:key="top_level_system"

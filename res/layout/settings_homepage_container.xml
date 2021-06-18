@@ -67,7 +67,7 @@
                 android:layout_gravity="top|end"
                 android:layout_marginEnd="8dp"
                 android:layout_marginTop="10dp"
-                android:src="@drawable/ic_homepage_search"
+                android:src="@drawable/ic_homepage_searcha"
                 app:layout_collapseMode="pin"
                 android:id="@+id/search_action_bar"
                 android:paddingRight="15dp"

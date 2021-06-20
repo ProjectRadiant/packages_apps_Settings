@@ -104,7 +104,7 @@
         android:key="top_level_themer"
         android:layout="@layout/nez_top_card_middle"
         android:title="Nezuko Extras"
-        android:summary="@string/nezuko_extras_title"
+        android:summary="Customisations and Theming"
         android:icon="@drawable/ic_settings_nezthe"
         android:order="-85"
         android:fragment="com.nezuko.extras.NezukoExtras"/>

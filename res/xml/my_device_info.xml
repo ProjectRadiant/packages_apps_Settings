@@ -19,31 +19,26 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:key="my_device_info_pref_screen"
-    android:title="@string/about_settings">
+    android:title="@string/about_settings"> 
 
-    <com.android.settingslib.widget.LayoutPreference
-        android:key="nezuko_info"
-        android:layout="@layout/about_phone_info"
-        android:selectable="false" />
+    <ListPreference
+       android:layout="@layout/nez_top_view"
+       android:selectable="false" />
 
     <!-- Device name -->
     <com.android.settings.widget.ValidatedEditTextPreference
         android:key="device_name"
-        android:layout="@layout/nez_option_cw_single"
+        android:layout="@layout/nez_cardview_top_alt"
         android:icon="@drawable/about_device_name"
         android:title="@string/my_device_info_device_name_preference_title"
         android:summary="@string/summary_placeholder"
         settings:controller="com.android.settings.deviceinfo.DeviceNamePreferenceController"
         settings:enableCopying="true"/>
-
-    <Preference 
-        android:layout="@layout/nez_cardview_divider_about" 
-        android:selectable="false"/>
  
     <!-- Model & hardware -->
     <Preference
         android:key="device_model"
-        android:layout="@layout/nez_option_cw_single"
+        android:layout="@layout/nez_top_card_middle_alt"
         android:icon="@drawable/about_model_hardware"
         android:title="@string/model_info"
         android:summary="@string/summary_placeholder"
@@ -52,31 +47,61 @@
         settings:keywords="@string/keywords_model_and_hardware"
         settings:controller="com.android.settings.deviceinfo.HardwareInfoPreferenceController"/>
 
-    <Preference 
-        android:layout="@layout/nez_cardview_divider_about" 
-        android:selectable="false"/>
-
     <!-- Android version -->
     <Preference
         android:key="firmware_version"
-        android:layout="@layout/nez_option_cw_single"
+        android:layout="@layout/nez_top_card_middle_alt"
         android:icon="@drawable/about_android_version"
         android:title="@string/firmware_version"
         android:summary="@string/summary_placeholder"
         android:fragment="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionSettings"
         settings:controller="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionPreferenceController"/>
 
-    <Preference 
-        android:layout="@layout/nez_cardview_divider_about" 
-        android:selectable="false"/>
-
     <!-- Build number -->
     <Preference
         android:key="build_number"
         android:icon="@drawable/about_build_number"
-        android:layout="@layout/nez_option_cw_single"
+        android:layout="@layout/nez_top_card_bottom_alt"
         android:title="@string/build_number"
         android:summary="@string/summary_placeholder"
         settings:enableCopying="true"
         settings:controller="com.android.settings.deviceinfo.BuildNumberPreferenceController"/>
+
+    <Preference 
+        android:layout="@layout/nez_cardview_divider_about" 
+        android:selectable="false"/>
+
+
+    <Preference
+        android:key="chipset"
+        android:layout="@layout/nez_cardview_top_alt"
+        android:title="Chipset"
+        android:icon="@drawable/chipsetab"
+        settings:enableCopying="true"
+        android:selectable="true"/>
+
+    <Preference
+        android:key="storage"
+        android:layout="@layout/nez_top_card_middle_alt"
+        android:title="Storage"
+        android:icon="@drawable/storageab"
+        settings:enableCopying="true"
+        android:selectable="true"/>
+
+    <Preference
+        android:key="battery"
+        android:layout="@layout/nez_top_card_middle_alt"
+        android:title="Battery"
+        android:icon="@drawable/batteryab"
+        settings:enableCopying="true"
+        android:selectable="true"/>
+
+    <Preference
+        android:key="display"
+        android:layout="@layout/nez_top_card_bottom_alt"
+        android:title="Display"
+        android:icon="@drawable/displayab"
+        settings:enableCopying="true"
+        android:selectable="true"/>
+
 </PreferenceScreen>

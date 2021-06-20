@@ -83,7 +83,7 @@
             android:fadingEdge="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Privacy and Data"
+            android:text=" Privacy and Data "
             android:background="@*android:color/notification_material_background_color"
             android:fontFamily="@*android:string/config_headlineFontFamily"
             android:layout_marginStart="22dp"

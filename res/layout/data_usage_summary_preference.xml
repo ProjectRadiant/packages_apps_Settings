@@ -24,7 +24,7 @@
     android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
     android:orientation="vertical"
     android:selectable="false"
-    style="@style/EntityHeader">
+    style="@style/EntityHeader1">
 
     <TextView
         android:id="@+id/usage_title"

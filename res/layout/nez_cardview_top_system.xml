@@ -74,22 +74,4 @@
                 android:layout_marginEnd="18.0dip"/>
         </LinearLayout>
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:ellipsize="marquee"
-            android:fadingEdge="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=" General "
-            android:background="@*android:color/notification_material_background_color"
-            android:fontFamily="@*android:string/config_headlineFontFamily"
-            android:layout_marginStart="22dp"
-            android:textColor="?android:attr/textColorSecondary"
-            android:gravity="center_vertical"
-            android:lineHeight="15dp"
-            android:singleLine="true" />
-    </LinearLayout>
 </RelativeLayout>

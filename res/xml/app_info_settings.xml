@@ -23,6 +23,8 @@
     <com.android.settingslib.widget.LayoutPreference
         android:key="header_view"
         android:layout="@layout/settings_entity_header"
+        style="@style/EntityHeader1"
+
         android:selectable="false"
         android:order="-10000"
         settings:allowDividerBelow="true"/>

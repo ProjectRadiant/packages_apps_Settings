@@ -22,6 +22,7 @@
     <com.android.settingslib.widget.LayoutPreference
         android:key="bluetooth_device_header"
         android:layout="@layout/settings_entity_header"
+        style="@style/EntityHeader1"
         android:selectable="false"
         settings:allowDividerBelow="true"
         settings:searchable="false"/>

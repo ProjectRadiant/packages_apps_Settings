@@ -13,4 +13,4 @@
 <com.android.settings.widget.TintDrawable
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:drawable="@drawable/ic_homepage_google"
-    android:tint="#19D39B" />
+    android:tint="#FFFFFF" />

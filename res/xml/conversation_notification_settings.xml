@@ -23,6 +23,8 @@
     <com.android.settingslib.widget.LayoutPreference
         android:key="pref_app_header"
         android:layout="@layout/settings_entity_header"
+        style="@style/EntityHeader1"
+
         settings:allowDividerBelow="true"/>
 
     <!-- important conversation -->

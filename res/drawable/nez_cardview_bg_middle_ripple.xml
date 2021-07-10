@@ -7,8 +7,7 @@
 		android:color="?android:attr/colorControlHighlight">
 		<item android:id="@android:id/mask">
 			<shape android:shape="rectangle">
-    			<stroke android:color="@color/nez_cardview" android:width="1dp" />
-				<solid android:color="@android:color/transparent" />
+				<solid android:color="@color/nez_cardview" />
 			</shape>
 		</item>
 		<item android:drawable="@drawable/nez_cardview_bg_middle" />

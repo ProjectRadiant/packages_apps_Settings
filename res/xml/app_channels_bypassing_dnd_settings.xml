@@ -19,7 +19,9 @@
     android:title="@string/zen_mode_settings_title">
     <com.android.settingslib.widget.LayoutPreference
         android:key="pref_app_header"
-        android:layout="@layout/settings_entity_header" />
+        android:layout="@layout/settings_entity_header"
+        style="@style/EntityHeader1"
+ />
 
     <PreferenceCategory
         android:key="zen_mode_bypassing_app_channels_list"

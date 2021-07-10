@@ -23,7 +23,9 @@
     <com.android.settingslib.widget.LayoutPreference
         android:key="pref_app_header"
         android:order="1"
-        android:layout="@layout/settings_entity_header" />
+        android:layout="@layout/settings_entity_header"
+        style="@style/EntityHeader1"
+ />
 
     <com.android.settingslib.widget.LayoutPreference
         android:key="block"

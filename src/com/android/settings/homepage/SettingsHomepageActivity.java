@@ -23,6 +23,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 import android.widget.ImageView;
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.card.MaterialCardView;
@@ -62,7 +63,7 @@ public class SettingsHomepageActivity extends FragmentActivity {
         root.setSystemUiVisibility(
                 View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
 
-        setHomepageContainerPaddingTop();
+        // setHomepageContainerPaddingTop();
 
         final Toolbar toolbar = findViewById(R.id.search_action_bar);
         FeatureFactory.getFactory(this).getSearchFeatureProvider()
@@ -79,13 +80,6 @@ public class SettingsHomepageActivity extends FragmentActivity {
         toolbar.setBackground(bgrounded);
 
         if (isDarkM()){
-            bgrounded2 =  new PaintDrawable(cg.noSysPriviledgeMoment(4, 9, this));
-            bgrounded2.setCornerRadius(pxToDp(this ,165));
-        } else{
-            bgrounded2 =  new PaintDrawable(cg.noSysPriviledgeMoment(5, 0, this));
-            bgrounded2.setCornerRadius(pxToDp(this ,165));
-        }
-        if (isDarkM()){
             getWindow().getDecorView().setBackgroundColor(cg.noSysPriviledgeMoment(4, 10, this));
             root.setBackgroundColor(cg.noSysPriviledgeMoment(4, 10, this));
             getWindow().addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
@@ -100,8 +94,16 @@ public class SettingsHomepageActivity extends FragmentActivity {
         ((FrameLayout) findViewById(R.id.main_content))
                 .getLayoutTransition().enableTransitionType(LayoutTransition.CHANGING);
 
-        FrameLayout frmlayout = (FrameLayout) findViewById(R.id.main_content2);
-        frmlayout.setBackground(bgrounded2);
+        if (isDarkM()){
+            bgrounded2 =  new PaintDrawable(cg.noSysPriviledgeMoment(4, 9, this));
+            bgrounded2.setCornerRadius(pxToDp(this ,165));
+        } else{
+            bgrounded2 =  new PaintDrawable(cg.noSysPriviledgeMoment(5, 0, this));
+            bgrounded2.setCornerRadius(pxToDp(this ,165));
+        }
+
+        LinearLayout lnLayout = (LinearLayout) findViewById(R.id.homepage_container);
+        lnLayout.setBackground(bgrounded2);
 
     }
 

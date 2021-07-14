@@ -85,6 +85,7 @@ public interface SearchFeatureProvider {
         final View navView = toolbar.getNavigationView();
         navView.setClickable(false);
         navView.setImportantForAccessibility(IMPORTANT_FOR_ACCESSIBILITY_NO);
+        navView.setBackground(null);
 
         toolbar.setOnClickListener(tb -> {
             final Context context = activity.getApplicationContext();

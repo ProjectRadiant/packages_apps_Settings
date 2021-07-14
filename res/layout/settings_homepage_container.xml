@@ -8,53 +8,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <androidx.core.widget.NestedScrollView
-        android:id="@+id/main_content_scrollable_container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_behavior="com.android.settings.widget.FloatingAppBarScrollingViewBehavior">
-
-        <FrameLayout
-            android:id="@+id/homepage_1_container"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <FrameLayout
-                android:id="@+id/main_content2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="245dp"
-                android:layout_marginStart="15dp"
-                android:layout_marginEnd="15dp"
-                android:animateLayoutChanges="true"/>
-
-            <LinearLayout
-                android:id="@+id/homepage_container"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:background="@android:color/transparent">
-
-                <FrameLayout
-                    android:id="@+id/contextual_cards_content"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/contextual_card_side_margin"
-                    android:layout_marginEnd="@dimen/contextual_card_side_margin"/>
-
-                <FrameLayout
-                    android:id="@+id/main_content"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:animateLayoutChanges="true"
-                    android:paddingStart="15dp"
-                    android:paddingEnd="15dp"/>
-
-        </LinearLayout>
-        </FrameLayout>
-    </androidx.core.widget.NestedScrollView> 
-
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -84,5 +37,31 @@
         <include layout="@layout/search_bar"/>
 
     </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/main_content_scrollable_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="245dp"
+        app:layout_behavior="com.android.settings.widget.FloatingAppBarScrollingViewBehavior">
+
+            <LinearLayout
+                android:id="@+id/homepage_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:background="@android:color/transparent">
+
+                <FrameLayout
+                    android:id="@+id/main_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:animateLayoutChanges="true"/>
+
+            </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView> 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout> 

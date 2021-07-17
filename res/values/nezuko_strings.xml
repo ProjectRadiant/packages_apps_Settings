@@ -118,6 +118,10 @@
     <string name="keywords_applock_settings">applock, applocker, app lock, app locker</string>
 
     <string name="nezuko_version_title">Nezuko version</string>
+    
+    <!-- Nezuko System Updates -->
+    <string name="nezuko_updater_title">System Updater</string>
+    <string name="nezuko_updater_summary">NezukoOS OTA</string>
 
 
 </resources>

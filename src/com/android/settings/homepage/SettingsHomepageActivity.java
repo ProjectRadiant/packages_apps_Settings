@@ -44,7 +44,7 @@ import com.android.settings.accounts.AvatarViewMixin;
 import com.android.settings.core.HideNonSystemOverlayMixin;
 import com.android.settings.homepage.contextualcards.ContextualCardsFragment;
 import com.android.settings.overlay.FeatureFactory;
-import com.nezuko.support.monet.colorgiber;
+import com.nezuko.support.monet.SettingsColors;
 import android.graphics.drawable.PaintDrawable;
 import android.content.Context;
 
@@ -69,38 +69,24 @@ public class SettingsHomepageActivity extends FragmentActivity {
         FeatureFactory.getFactory(this).getSearchFeatureProvider()
                 .initSearchToolbar(this /* activity */, toolbar, SettingsEnums.SETTINGS_HOMEPAGE);
         
-        colorgiber cg = new colorgiber();
-        if (isDarkM()){
-            bgrounded =  new PaintDrawable(cg.noSysPriviledgeMoment(4, 9, this));
-            bgrounded.setCornerRadius(pxToDp(this ,160));
-        } else{
-            bgrounded =  new PaintDrawable(cg.noSysPriviledgeMoment(5, 0, this));
-            bgrounded.setCornerRadius(pxToDp(this ,160));
-        }
+        SettingsColors sc = new SettingsColors();
+
+        bgrounded =  new PaintDrawable(sc.secBG(this));
+        bgrounded.setCornerRadius(pxToDp(this ,160));
         toolbar.setBackground(bgrounded);
 
-        if (isDarkM()){
-            getWindow().getDecorView().setBackgroundColor(cg.noSysPriviledgeMoment(4, 10, this));
-            root.setBackgroundColor(cg.noSysPriviledgeMoment(4, 10, this));
-            getWindow().addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-            getWindow().setStatusBarColor(cg.noSysPriviledgeMoment(4, 10, this));
-        } else{
-            getWindow().getDecorView().setBackgroundColor(cg.noSysPriviledgeMoment(5, 1, this));
-            root.setBackgroundColor(cg.noSysPriviledgeMoment(5, 1, this));
-            getWindow().addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-            getWindow().setStatusBarColor(cg.noSysPriviledgeMoment(5, 1, this));            
-        }
+        getWindow().getDecorView().setBackgroundColor(sc.mainBG(this));
+        root.setBackgroundColor(sc.mainBG(this));
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        getWindow().setStatusBarColor(sc.mainBG(this));
+
         showFragment(new TopLevelSettings(), R.id.main_content);
         ((FrameLayout) findViewById(R.id.main_content))
                 .getLayoutTransition().enableTransitionType(LayoutTransition.CHANGING);
 
-        if (isDarkM()){
-            bgrounded2 =  new PaintDrawable(cg.noSysPriviledgeMoment(4, 9, this));
-            bgrounded2.setCornerRadius(pxToDp(this ,165));
-        } else{
-            bgrounded2 =  new PaintDrawable(cg.noSysPriviledgeMoment(5, 0, this));
-            bgrounded2.setCornerRadius(pxToDp(this ,165));
-        }
+
+        bgrounded2 =  new PaintDrawable(sc.secBG(this));
+        bgrounded2.setCornerRadius(pxToDp(this ,165));
 
         LinearLayout lnLayout = (LinearLayout) findViewById(R.id.homepage_container);
         lnLayout.setBackground(bgrounded2);

@@ -104,7 +104,7 @@ public class TintDrawable extends DrawableWrapper {
             if (isDarkM){
                 getDrawable().mutate().setTintList(ColorStateList.valueOf(cg.noSysPriviledgeMoment(5, 2, context)));
             } else{
-                getDrawable().mutate().setTintList(ColorStateList.valueOf(cg.noSysPriviledgeMoment(5, 0, context)));
+                getDrawable().mutate().setTintList(ColorStateList.valueOf(cg.noSysPriviledgeMoment(5, 9, context)));
             }
         }
     } 

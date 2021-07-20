@@ -162,6 +162,8 @@ import com.android.settings.wifi.savedaccesspoints2.SavedAccessPointsWifiSetting
 import com.android.settings.wifi.tether.WifiTetherSettings;
 import com.nezuko.extras.NezukoExtras;
 import com.nezuko.extras.fragments.GlobalActionsSettings;
+import com.nezuko.extras.fragments.StyleSystemOverlayPreferenceFragment;
+import com.nezuko.extras.fragments.Accents;
 
 public class SettingsGateway {
 
@@ -314,6 +316,8 @@ public class SettingsGateway {
             MediaControlsSettings.class.getName(),
             NezukoExtras.class.getName(),
             GlobalActionsSettings.class.getName(),
+            StyleSystemOverlayPreferenceFragment.class.getName(),
+            Accents.class.getName()
     };
 
     public static final String[] SETTINGS_FOR_RESTRICTED = {
@@ -355,5 +359,7 @@ public class SettingsGateway {
             UserBackupSettingsActivity.class.getName(),
             Settings.NezukoExtrasActivity.class.getName(),
             Settings.GlobalActionsSettingsActivity.class.getName(),
+            Settings.StyleSystemOverlayPreferenceFragmentActivity.class.getName(),
+            Settings.AccentsActivity.class.getName(),
     };
 }

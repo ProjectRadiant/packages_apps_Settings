@@ -46,6 +46,8 @@ import com.android.settings.security.SecuritySettings;
 import com.android.settings.system.SystemDashboardFragment;
 import com.android.settingslib.drawer.CategoryKey;
 import com.nezuko.extras.NezukoExtras;
+import com.nezuko.extras.fragments.StyleSystemOverlayPreferenceFragment;
+import com.nezuko.extras.fragments.Accents;
 
 import java.util.Map;
 
@@ -122,6 +124,10 @@ public class DashboardFragmentRegistry {
                 CategoryKey.CATEGORY_SMART_BATTERY_SETTINGS);
         PARENT_TO_CATEGORY_KEY_MAP.put(NezukoExtras.class.getName(),
                 CategoryKey.CATEGORY_SYSTEM_DEVELOPMENT);
+        PARENT_TO_CATEGORY_KEY_MAP.put(Accents.class.getName(),
+                CategoryKey.CATEGORY_SYSTEM_OVER_PREF);
+        PARENT_TO_CATEGORY_KEY_MAP.put(StyleSystemOverlayPreferenceFragment.class.getName(),
+                CategoryKey.CATEGORY_SYSTEM_OVER_PREF);
 
         CATEGORY_KEY_TO_PARENT_MAP = new ArrayMap<>(PARENT_TO_CATEGORY_KEY_MAP.size());
 

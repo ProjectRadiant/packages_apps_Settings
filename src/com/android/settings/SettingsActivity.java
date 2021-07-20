@@ -39,7 +39,8 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import androidx.annotation.Nullable;
 import androidx.annotation.VisibleForTesting;
 import androidx.fragment.app.Fragment;
@@ -66,7 +67,9 @@ import com.android.settingslib.core.instrumentation.Instrumentable;
 import com.android.settingslib.core.instrumentation.SharedPreferencesLogger;
 import com.android.settingslib.development.DevelopmentSettingsEnabler;
 import com.android.settingslib.drawer.DashboardCategory;
-
+import com.nezuko.support.monet.SettingsColors;
+import android.graphics.drawable.PaintDrawable;
+import android.view.WindowManager;
 import com.google.android.setupcompat.util.WizardManagerHelper;
 
 import java.util.ArrayList;
@@ -79,6 +82,7 @@ public class SettingsActivity extends SettingsBaseActivity
         ButtonBarHandler, FragmentManager.OnBackStackChangedListener {
 
     private static final String LOG_TAG = "SettingsActivity";
+    SettingsColors sc = new SettingsColors();
 
     // Constants for state save/restore
     private static final String SAVE_KEY_CATEGORIES = ":settings:categories";
@@ -288,6 +292,8 @@ public class SettingsActivity extends SettingsBaseActivity
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(!isInSetupWizard);
             actionBar.setHomeButtonEnabled(!isInSetupWizard);
+            getWindow().addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            getWindow().setStatusBarColor(sc.mainBG(this));
             actionBar.setDisplayShowTitleEnabled(true);
         }
         mSwitchBar = findViewById(R.id.switch_bar);

@@ -35,6 +35,7 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import com.nezuko.support.monet.SettingsColors;
 
 import androidx.annotation.IntDef;
 import androidx.annotation.VisibleForTesting;
@@ -97,6 +98,7 @@ public class EntityHeaderController {
     private boolean mIsInstantApp;
 
     private View.OnClickListener mEditOnClickListener;
+    SettingsColors sc = new SettingsColors();
 
     /**
      * Creates a new instance of the controller.
@@ -318,8 +320,7 @@ public class EntityHeaderController {
             return this;
         }
         actionBar.setBackgroundDrawable(
-                new ColorDrawable(
-                        Utils.getColorAttrDefaultColor(activity, android.R.attr.colorPrimaryDark)));
+                new ColorDrawable(sc.mainBG(activity)));
         actionBar.setElevation(0);
         if (mRecyclerView != null && mLifecycle != null) {
             ActionBarShadowController.attachToView(mActivity, mLifecycle, mRecyclerView);

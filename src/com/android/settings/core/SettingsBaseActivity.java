@@ -78,7 +78,6 @@ public class SettingsBaseActivity extends FragmentActivity {
             Log.w(TAG, "Devices lock task mode pinned.");
             finish();
         }
-        final long startTime = System.currentTimeMillis();
         getLifecycle().addObserver(new HideNonSystemOverlayMixin(this));
 
         final TypedArray theme = getTheme().obtainStyledAttributes(android.R.styleable.Theme);
@@ -104,11 +103,6 @@ public class SettingsBaseActivity extends FragmentActivity {
         ctl.setContentScrimColor(sc.mainBG(this));
 
         setActionBar(toolbar);
-
-        if (DEBUG_TIMING) {
-            Log.d(TAG, "onCreate took " + (System.currentTimeMillis() - startTime)
-                    + " ms");
-        }
     }
 
     @Override

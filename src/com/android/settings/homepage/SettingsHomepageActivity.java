@@ -85,11 +85,9 @@ public class SettingsHomepageActivity extends FragmentActivity {
                 .getLayoutTransition().enableTransitionType(LayoutTransition.CHANGING);
 
 
-        bgrounded2 =  new PaintDrawable(sc.secBG(this));
-        bgrounded2.setCornerRadius(pxToDp(this ,165));
-
         LinearLayout lnLayout = (LinearLayout) findViewById(R.id.homepage_container);
-        lnLayout.setBackground(bgrounded2);
+        Drawable background = lnLayout.getBackground();
+        background.setTint(sc.secBG(this));
 
     }
 

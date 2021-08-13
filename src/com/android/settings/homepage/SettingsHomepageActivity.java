@@ -30,6 +30,7 @@ import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.android.settings.Utils;
 import android.app.UiModeManager;
+import android.graphics.drawable.Drawable;
 
 import androidx.annotation.VisibleForTesting;
 import androidx.fragment.app.Fragment;

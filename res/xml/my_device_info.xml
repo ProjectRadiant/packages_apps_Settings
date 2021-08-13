@@ -28,7 +28,7 @@
     <!-- Device name -->
     <com.android.settings.widget.ValidatedEditTextPreference
         android:key="device_name"
-        android:layout="@layout/nez_cardview_top"
+        android:layout="@layout/nez_cardview_top_alt"
         android:icon="@drawable/about_device_name"
         android:title="@string/my_device_info_device_name_preference_title"
         android:summary="@string/summary_placeholder"
@@ -84,7 +84,7 @@
 
     <Preference
         android:key="chipset"
-        android:layout="@layout/nez_cardview_top"
+        android:layout="@layout/nez_cardview_top_alt"
         android:title="Chipset"
         android:icon="@drawable/chipsetab"
         settings:enableCopying="true"

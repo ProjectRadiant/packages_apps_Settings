@@ -239,6 +239,7 @@ public class Settings extends SettingsActivity {
     public static class AccentsActivity extends SettingsActivity {}
     public static class StyleSystemOverlayPreferenceFragmentActivity extends SettingsActivity {}
     public static class NeFontsActivity extends SettingsActivity {}
+    public static class VolSActivity extends SettingsActivity {}
 
     /**
      * Activity for MediaControlsSettings

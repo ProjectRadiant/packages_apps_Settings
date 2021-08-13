@@ -165,6 +165,7 @@ import com.nezuko.extras.fragments.GlobalActionsSettings;
 import com.nezuko.extras.fragments.StyleSystemOverlayPreferenceFragment;
 import com.nezuko.extras.fragments.Accents;
 import com.nezuko.extras.fragments.Themer;
+import com.nezuko.extras.fragments.VolumeSteps;
 
 public class SettingsGateway {
 
@@ -319,7 +320,8 @@ public class SettingsGateway {
             GlobalActionsSettings.class.getName(),
             StyleSystemOverlayPreferenceFragment.class.getName(),
             Accents.class.getName(),
-            Themer.class.getName()
+            Themer.class.getName(),
+            VolumeSteps.class.getName()
     };
 
     public static final String[] SETTINGS_FOR_RESTRICTED = {
@@ -364,5 +366,6 @@ public class SettingsGateway {
             Settings.StyleSystemOverlayPreferenceFragmentActivity.class.getName(),
             Settings.AccentsActivity.class.getName(),
             Settings.NeFontsActivity.class.getName(),
+            Settings.VolSActivity.class.getName()
     };
 }

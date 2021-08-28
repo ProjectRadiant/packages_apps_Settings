@@ -321,7 +321,8 @@ public class SettingsGateway {
             StyleSystemOverlayPreferenceFragment.class.getName(),
             Accents.class.getName(),
             Themer.class.getName(),
-            VolumeSteps.class.getName()
+            VolumeSteps.class.getName(),
+            MasterClear.class.getName()
     };
 
     public static final String[] SETTINGS_FOR_RESTRICTED = {
@@ -366,6 +367,7 @@ public class SettingsGateway {
             Settings.StyleSystemOverlayPreferenceFragmentActivity.class.getName(),
             Settings.AccentsActivity.class.getName(),
             Settings.NeFontsActivity.class.getName(),
-            Settings.VolSActivity.class.getName()
+            Settings.VolSActivity.class.getName(),
+            Settings.FactResActivity.class.getName()
     };
 }

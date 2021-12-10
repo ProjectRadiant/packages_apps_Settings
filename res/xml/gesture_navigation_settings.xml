@@ -59,6 +59,12 @@
             settings:textEnd="@string/high_label"/>
     </PreferenceCategory>
 
+    <com.radiant.support.preferences.SystemSettingSwitchPreference
+        android:key="fullscreen_gestures"
+        android:title="@string/fullscreen_gestures_title"
+        android:summary="@string/fullscreen_gestures_summary"
+        android:defaultValue="false" />
+
     <com.android.settingslib.widget.FooterPreference
         android:key="gesture_navigation_settings_footer"
         android:title="@string/back_sensitivity_dialog_message"

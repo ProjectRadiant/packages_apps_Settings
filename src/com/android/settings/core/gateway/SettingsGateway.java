@@ -317,7 +317,7 @@ public class SettingsGateway {
             MediaControlsSettings.class.getName(),
             NetworkProviderSettings.class.getName(),
             AlarmsAndRemindersDetails.class.getName(),
-            MediaManagementAppsDetails.class.getName()
+            MediaManagementAppsDetails.class.getName(),
     };
 
     public static final String[] SETTINGS_FOR_RESTRICTED = {

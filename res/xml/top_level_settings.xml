@@ -99,12 +99,12 @@
         android:title="@string/wallpaper_settings_title"/>
 
     <Preference
+        android:fragment="com.android.settings.homepage.PersonalizationsFragment"
         android:icon="@drawable/ic_homepage_personalizations"
         settings:layout="@layout/rdnt_card_bot"
-        android:key="wall"
+        android:key="top_level_personalizations"
         android:order="-78"
-        android:title="Personalisations"/>
-
+        android:title="@string/other_setting"/>
 
     <Preference
         android:fragment="com.android.settings.privacy.PrivacyDashboardFragment"

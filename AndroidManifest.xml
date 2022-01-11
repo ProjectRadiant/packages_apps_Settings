@@ -3850,6 +3850,10 @@
                   android:theme="@style/SudThemeGlif.Light">
         </activity>
 
+        <activity android:name="com.radiant.settings.color.WallpaperColorActivity"
+                  android:theme="@style/Theme.Radiant.Fullscreen"
+                  android:exported="true"/>
+
         <!-- This is the longest AndroidManifest.xml ever. -->
     </application>
 </manifest>

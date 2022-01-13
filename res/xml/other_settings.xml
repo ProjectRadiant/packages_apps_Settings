@@ -27,6 +27,14 @@
                android:defaultValue="false"
                android:icon="@drawable/ic_colors"/>
 
+          <com.radiant.support.preferences.SystemSettingSwitchPreference
+               android:key="monet_plain_theme" 
+               android:title="@string/plain_colors"
+               android:summary="@string/plain_colors_summary"
+               android:dependency="monet_custom_themes"
+               android:defaultValue="false"
+               android:icon="@drawable/ic_dark"/>
+
           <Preference
                android:key="monet_wall" 
                android:title="@string/monet_wall"

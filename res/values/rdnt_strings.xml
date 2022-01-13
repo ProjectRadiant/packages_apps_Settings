@@ -25,6 +25,10 @@
      <!-- Others Page -->
     <string name="other_setting">Personalizations</string>
     <string name="monet_wall">Pick base color from wallpaper</string>
+    <string name="custom_colors">Enable custom Monet settings</string>
+    <string name="monet_wall_summary">Opens a picker that lets you select a custom point from wallpaper as base color</string>
+    <string name="custom_colors_summary">Enable settings to pick custom colors as starting point for themes</string>
+    <string name="monet">Monet</string>
 
      <!-- Model and Hardware -->
     <string name="net_info">Network</string>
@@ -33,7 +37,6 @@
     <string name="model_summary">Model, phone number, IMEI, etc</string>
     <string name="model_name">Device status</string>
     <string name="legal_summary">Licenses and legal</string>
-     <string name="monet">Monet</string>
 
      <!-- About page -->
     <string name="battery">Battery</string>

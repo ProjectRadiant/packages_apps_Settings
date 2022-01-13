@@ -20,9 +20,17 @@
     <PreferenceCategory
         android:title="@string/monet">
 
+          <com.radiant.support.preferences.SystemSettingSwitchPreference
+               android:key="monet_custom_themes" 
+               android:title="@string/custom_colors"
+               android:summary="@string/custom_colors_summary"
+               android:icon="@drawable/ic_colors"/>
+
           <Preference
                android:key="monet_wall" 
                android:title="@string/monet_wall"
+               android:summary="@string/monet_wall_summary"
+               android:dependency="monet_custom_themes"
                android:icon="@drawable/ic_settings_wallpaper_white"
                settings:controller="com.radiant.settings.controller.RadiantColorPreferenceController"/>
 

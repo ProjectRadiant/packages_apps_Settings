@@ -108,7 +108,6 @@ public class WallpaperColorActivity extends AppCompatActivity {
                 .setTitle(getResources().getString(R.string.apply)+"?")
                 .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
-                        Settings.System.putInt(WallpaperColorActivity.this.getContentResolver(), Settings.System.MONET_CUSTOM_THEME, 1);
                         Settings.System.putInt(WallpaperColorActivity.this.getContentResolver(), Settings.System.MONET_CUSTOM_COLOR, i[0]);
                         WallpaperColorActivity.this.finish();
                     }

@@ -24,6 +24,7 @@
                android:key="monet_custom_themes" 
                android:title="@string/custom_colors"
                android:summary="@string/custom_colors_summary"
+               android:defaultValue="false"
                android:icon="@drawable/ic_colors"/>
 
           <Preference

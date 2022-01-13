@@ -29,6 +29,9 @@
     <string name="monet_wall_summary">Opens a picker that lets you select a custom point from wallpaper as base color</string>
     <string name="custom_colors_summary">Enable settings to pick custom colors as starting point for themes</string>
     <string name="monet">Monet</string>
+    <string name="lockscreen">Lockscreen</string>
+    <string name="small_clock">Always use small clock</string>
+    <string name="small_clock_summary">Fully disable big clock and always use small clock</string>
 
      <!-- Model and Hardware -->
     <string name="net_info">Network</string>

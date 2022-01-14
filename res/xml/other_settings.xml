@@ -33,6 +33,13 @@
                android:summary="@string/plain_colors_summary"
                android:dependency="monet_custom_themes"
                android:defaultValue="false"
+               android:icon="@drawable/ic_plain"/>
+
+          <com.radiant.support.preferences.SwitchPreference
+               android:title="@string/pitch_colors"
+               android:key="pitch_theme"
+               android:summary="@string/pitch_colors_summary"
+               android:dependency="monet_custom_themes"
                android:icon="@drawable/ic_dark"/>
 
           <Preference

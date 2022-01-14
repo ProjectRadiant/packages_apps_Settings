@@ -34,6 +34,8 @@
     <string name="small_clock_summary">Fully disable big clock and always use small clock</string>
     <string name="plain_colors">Plain colors</string>
     <string name="plain_colors_summary">Use plain hardcoded colors for Monet theme extracted by setting saturation to 0</string>
+    <string name="pitch_colors">Pitch black system theme</string>
+    <string name="pitch_colors_summary">Pitch black theme for Settings, SystemUI, etc. (BETA! NOT EVERYTHING IS PERFECT!)</string>
 
      <!-- Model and Hardware -->
     <string name="net_info">Network</string>

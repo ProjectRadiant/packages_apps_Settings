@@ -92,7 +92,7 @@ public class WallpaperColorActivity extends AppCompatActivity {
             if (i[0] != color) {
                 i[0] = color;
                 if(i[0] == Color.BLACK)
-                    i[0] = Color.parseColor("#F2f2f2f");
+                    i[0] = Color.parseColor("#171717");
                 SettingsColors sc = new SettingsColors(i[0]);
                 cL.getBackground().setTint(sc.mainBG());
                 iV1.getDrawable().setTint(sc.accentCol());

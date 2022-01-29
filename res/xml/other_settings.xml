@@ -52,6 +52,16 @@
 
      </PreferenceCategory>
 
+    <PreferenceCategory
+        android:key="theme_customization_category"
+        android:title="Text">
+
+        <ListPreference
+            android:key="android.theme.customization.font"
+            android:icon="@drawable/font_ic"
+            android:title="@string/theme_customization_font_title"/>
+
+    </PreferenceCategory>
 
     <PreferenceCategory
         android:title="@string/lockscreen">

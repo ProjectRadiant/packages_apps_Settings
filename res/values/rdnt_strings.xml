@@ -55,4 +55,8 @@
      <string name="wellbeing">Digital Wellbeing</string>
      <string name="ds_ia">yourkeyhere</string>
 
+    <!-- [CHAR_LIMIT=NONE] Developer Settings: Title of the setting which enables overlays to customize headline and body fonts. -->
+    <string name="theme_customization_font_title">Headline / Body font</string>
+
+
 </resources>

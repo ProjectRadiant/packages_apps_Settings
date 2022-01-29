@@ -30,6 +30,12 @@ import androidx.preference.Preference.OnPreferenceChangeListener;
 import com.android.settings.R;
 import com.android.settings.dashboard.DashboardFragment;
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
+import com.android.settings.development.OverlayCategoryPreferenceController;
+import java.util.List;
+import com.android.settingslib.core.AbstractPreferenceController;
+import com.android.settingslib.core.lifecycle.Lifecycle;
+import androidx.fragment.app.Fragment;
+import java.util.ArrayList;
 
 public class PersonalizationsFragment extends DashboardFragment implements OnPreferenceChangeListener {
 
@@ -37,6 +43,18 @@ public class PersonalizationsFragment extends DashboardFragment implements OnPre
     private SwitchPreference mPitchPreference;
     IOverlayManager mOverlayManager;
 
+    @Override
+    protected List<AbstractPreferenceController> createPreferenceControllers(Context context) {
+        return buildPreferenceControllers(context, getSettingsLifecycle(), this);
+    }
+
+    private static List<AbstractPreferenceController> buildPreferenceControllers(
+            Context context, Lifecycle lifecycle, Fragment fragment) {
+        final List<AbstractPreferenceController> controllers = new ArrayList<>();
+        controllers.add(new OverlayCategoryPreferenceController(context,
+                "android.theme.customization.font"));
+        return controllers;
+    }
 
     @Override
     public int getMetricsCategory() {

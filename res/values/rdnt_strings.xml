@@ -23,7 +23,7 @@
     <string name="connected_tws_device_saved_title">Saved Earbuds</string>
 
      <!-- Others Page -->
-    <string name="other_setting">Personalizations</string>
+    <string name="other_settings">Personalizations</string>
     <string name="monet_wall">Pick base color from wallpaper</string>
     <string name="custom_colors">Custom Monet settings</string>
     <string name="monet_wall_summary">Opens a picker that lets you select a custom point from wallpaper as base color</string>

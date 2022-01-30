@@ -100,12 +100,12 @@
         settings:controller="com.android.settings.display.TopLevelWallpaperPreferenceController"/>
 
     <Preference
-        android:fragment="com.android.settings.homepage.PersonalizationsFragment"
+        android:fragment="com.radiant.extras.RadiantExtras"
         android:icon="@drawable/ic_homepage_personalizations"
         settings:layout="@layout/rdnt_card_bot"
         android:key="top_level_personalizations"
         android:order="-78"
-        android:title="@string/other_setting"/>
+        android:title="@string/other_settings"/>
 
     <Preference
         android:fragment="com.android.settings.privacy.PrivacyDashboardFragment"

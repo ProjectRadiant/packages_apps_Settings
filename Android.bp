@@ -44,7 +44,11 @@ android_library {
         "SettingsLib-search-defaults",
     ],
 
-    srcs: ["src/**/*.java"],
+    srcs: [
+        "src/**/*.java",
+        "Themer/src/**/*.java",
+    ],
+
 
     static_libs: [
         "androidx-constraintlayout_constraintlayout",
@@ -82,6 +86,14 @@ android_library {
         "ims-common",
         "app-compat-annotations",
     ],
+
+    aaptflags: ["--extra-packages com.radiant.extras"],
+
+    resource_dirs: [
+        "res",
+        "Themer/res",
+    ],  
+
 }
 
 platform_compat_config {
@@ -103,7 +115,6 @@ android_app {
     ],
     static_libs: ["Settings-core"],
     uses_libs: ["org.apache.http.legacy"],
-    resource_dirs: [],
     optimize: {
         proguard_flags_files: ["proguard.flags"],
     },

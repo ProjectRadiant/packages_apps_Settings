@@ -123,6 +123,7 @@ public class TopLevelSettings extends DashboardFragment implements
             "lineage",
             "omni",
             "phh",
+            "radiant",
             "poco",
             "xiaomi",
             "asus",

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2021 Project Radiant
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Refresh rate -->
+    <string name="min_refresh_rate_title">Minimum refresh rate</string>
+    <string name="max_refresh_rate_title">Maximum refresh rate</string>
+    <!-- Title for connected TWS device group [CHAR LIMIT=none]-->
+    <string name="connected_tws_device_saved_title">Saved Earbuds</string>
+    <!-- Others Page -->
+    <string name="other_settings">Personalizations</string>
+    <string name="monet_wall">Pick base color from wallpaper</string>
+    <string name="custom_colors">Custom Monet settings</string>
+    <string name="monet_wall_summary">Opens a picker that lets you select a custom point from wallpaper as base color</string>
+    <string name="custom_colors_summary">Enable settings to customise Monet themes</string>
+    <string name="monet">Monet</string>
+    <string name="lockscreen">Lockscreen</string>
+    <string name="small_clock">Always use small clock</string>
+    <string name="small_clock_summary">Fully disable big clock and always use small clock</string>
+    <string name="plain_colors">Plain colors</string>
+    <string name="plain_colors_summary">Use plain hardcoded colors for Monet theme extracted by setting saturation to 0</string>
+    <string name="pitch_colors">Pitch black system theme</string>
+    <string name="pitch_colors_summary">Pitch black theme for Settings, SystemUI, etc. (BETA! NOT EVERYTHING IS PERFECT!)</string>
+    <!-- Model and Hardware -->
+    <string name="net_info">Network</string>
+    <string name="mod_info">@string/model_info</string>
+    <string name="id_info">Identifiers</string>
+    <string name="model_summary">Model, phone number, IMEI, etc</string>
+    <string name="model_name">Device status</string>
+    <string name="legal_summary">Licenses and legal</string>
+    <!-- About page -->
+    <string name="battery">Battery</string>
+    <string name="display">Display</string>
+    <string name="storage">Storage</string>
+    <string name="chipset">Chipset</string>
+    <!-- Home -->
+    <string name="wellbeing">Digital Wellbeing</string>
+    <string name="ds_ia">yourkeyhere</string>
+    <!-- [CHAR_LIMIT=NONE] Developer Settings: Title of the setting which enables overlays to customize headline and body fonts. -->
+    <string name="theme_customization_font_title">Headline / Body font</string>
+    <!-- Three-fingers-swipe to screenshot -->
+    <string name="three_finger_gesture">Swipe to screenshot</string>
+    <string name="three_finger_gesture_summary">Swipe down with three fingers to take a screenshot</string>
+    <!-- Scramble pin -->
+    <string name="unlock_scramble_pin_layout_title">Scramble layout</string>
+    <string name="unlock_scramble_pin_layout_summary">Scramble PIN layout when unlocking device</string>
+    <!-- Quick unlock -->
+    <string name="unlock_quick_unlock_control_title">Quick unlock</string>
+    <string name="unlock_quick_unlock_control_summary">Unlock automatically when the correct PIN/password is entered</string>
+    <!-- Fullscreen gestures -->
+    <string name="fullscreen_gestures_title">Fullscreen gestures</string>
+    <string name="fullscreen_gestures_summary">Hide navbar pill and keyboard space</string>
+    <string name="gesture_navbar_length_title">Gesture navbar length</string>
+    <string name="short_label">Short</string>
+    <string name="long_label">Long</string>
+</resources>
